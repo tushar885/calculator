@@ -41,8 +41,8 @@ th_1.addEventListener("click",() => {
     btn_del.style.backgroundColor = "hsl(225, 21%, 49%)";
     btn_reset.style.backgroundColor = "hsl(225, 21%, 49%)";
     btn_equal.style.backgroundColor = "hsl(6, 63%, 50%)";
-    calc_display_result.style.color = "hsl(221, 14%, 31%)";
-    calc_display_equation.style.color = "hsl(221, 14%, 31%)";
+    calc_display_result.style.color = white;
+    calc_display_equation.style.color = white;
 
 });
 
