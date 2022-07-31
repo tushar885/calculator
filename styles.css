@@ -1,0 +1,229 @@
+@import url("reset.css");
+
+:root{
+    /* ### Theme 1 */
+
+    /* #### Text  */
+    --Very-dark-grayish-blue: hsl(221, 14%, 31%); 
+    --White: hsl(0, 0, 100%);
+
+    /* #### Backgrounds  */
+    --Very-dark-desaturated-blue-main-background: hsl(222, 26%, 31%); 
+    --Very-dark-desaturated-blue-toggle-background-keypad-background: hsl(223, 31%, 20%);
+    --Very-dark-desaturated-blue-screen-background: hsl(224, 36%, 15%);
+
+    /* #### Keys  */
+    --Desaturated-dark-blue-key-background: hsl(225, 21%, 49%); 
+    --Desaturated-dark-blue-key-shadow: hsl(224, 28%, 35%); 
+    --Red-key-background-toggle: hsl(6, 63%, 50%);
+    --Dark-red-key-shadow: hsl(6, 70%, 34%); 
+    --Light-grayish-orange-key-background: hsl(30, 25%, 89%); 
+    --Grayish-orange-key-shadow: hsl(28, 16%, 65%);
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body, button{
+    font-family: 'League Spartan', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--Very-dark-desaturated-blue-main-background);
+}
+.calculator{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 90%;
+    max-width: 400px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 2rem;
+}
+.calc-head{
+    font-size: 3rem;
+    align-self: flex-end;
+    color: white;
+    letter-spacing: 1px;
+}
+.theme-wrapper{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.span-theme-1{
+    align-self: flex-end;
+    font-size: 1.2rem;
+    color: white;
+    letter-spacing: 1px;
+}
+.theme-slider{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.theme-token{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 0rem .4rem;
+    color: white;
+}
+.theme-slider-bar{
+    /* position: relative; */
+    /* height: 1rem; */
+    background-color: var(--Very-dark-desaturated-blue-toggle-background-keypad-background);
+    border-radius: 1rem;
+    padding: .5rem;
+}
+.theme-slider-ball{
+    position: relative;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    background-color: var(--Red-key-background-toggle);
+}
+.calc-display{
+    height: 8rem;
+    background-color: var(--Very-dark-desaturated-blue-screen-background);
+    border-radius: 1rem;
+    text-align: right;
+     padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: flex-end; */
+    justify-content: center;
+    /* text-align: center; */
+}
+#calc-display-result{
+    margin: 0;
+    letter-spacing: 1px;
+    font-size: 3rem;
+    color: white;
+    align-self: flex-end;
+    height: 50%;
+    /* margin: auto ; */
+     display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    word-wrap: break-word;
+}
+.calc-display-equation{
+    margin: 0;
+    letter-spacing: 1px;
+    font-size: 1.7rem;
+    color: white;
+    align-self: flex-start;
+    height: 50%;
+    /* margin-top: auto; */
+    display: flex;
+    align-items: center;
+     justify-content: flex-start;
+    width: 100%;
+}
+.calc-key-layout{
+    padding: 2rem;
+    display: grid;
+    grid-template-areas: 
+        "btn-7 btn-8 btn-9 btn-del"
+        "btn-4 btn-5 btn-6 btn-add"
+        "btn-1 btn-2 btn-3 btn--"
+        "btn-dot btn-0 btn-div btn-x"
+        "btn-reset btn-reset btn-equal btn-equal"
+    ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1.4rem;
+    background-color: var(--Very-dark-desaturated-blue-toggle-background-keypad-background);
+    border-radius: 1rem;
+}
+.btn {
+    font-size: 3.2rem;
+    padding: 1rem 0;
+    color: var(--Very-dark-grayish-blue);
+    border-radius: .8rem;
+    border: none;
+}
+.btn-1{
+    grid-area: btn-1;
+}
+.btn-2{
+    grid-area: btn-2;
+}
+.btn-3{
+    grid-area: btn-3;
+}
+.btn-4{
+    grid-area: btn-4;
+}
+.btn-5{
+    grid-area: btn-5;
+}
+.btn-6{
+    grid-area: btn-6;
+}
+.btn-7{
+    grid-area: btn-7;
+}
+.btn-8{
+    grid-area: btn-8;
+}
+.btn-9{
+    grid-area: btn-9;
+}
+.btn-0{
+    grid-area: btn-0;
+}
+.btn-dot{
+    grid-area: btn-dot;
+}
+.btn-add{
+    grid-area: btn-add;
+}
+.btn--{
+    grid-area: btn--;
+}
+.btn-x{
+    grid-area: btn-x;
+}
+.btn-div{
+    grid-area: btn-div;
+}
+.btn-del{
+    grid-area: btn-del;
+    font-size: 2.2rem;
+    background-color: var(--Desaturated-dark-blue-key-background);
+    color: white;
+    letter-spacing: 1px;
+    border-radius: .8rem;
+    border: none;
+}
+.btn-reset{
+    grid-area: btn-reset;
+    font-size: 2.2rem;
+    background-color: var(--Desaturated-dark-blue-key-background);
+    color: white;
+    letter-spacing: 1px;
+    border-radius: .8rem;
+    border: none;
+}
+.btn-equal{
+    grid-area: btn-equal;
+    font-size: 2.2rem;
+    background-color: var(--Red-key-background-toggle);
+    color: white;
+    border-radius: .8rem;
+    border: none;
+}

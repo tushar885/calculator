@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Calculator</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <header>
+        <div class="calc-head">calc</div>
+        <section class="theme-wrapper">
+          <span class="span-theme-1">THEME</span>
+          <!-- Here the slide bar will come -->
+          <section class="theme-slider">
+            <div class="theme-token">
+              <span id="theme-1">1</span>
+              <span id="theme-2">2</span>
+              <span id="theme-3">3</span>
+            </div>
+            <div class="theme-slider-bar">
+              <div class="theme-slider-ball"></div>
+            </div>
+          </section>
+        </section>
+      </header>
+      <section class="calc-display">
+        <p class="calc-display-equation"></p>
+        <p id="calc-display-result"></p>
+      </section>
+      <main class="calc-key-layout">
+        <button class="btn num-btn btn-1">1</button>
+        <button class="btn num-btn btn-2">2</button>
+        <button class="btn num-btn btn-3">3</button>
+        <button class="btn num-btn btn-4">4</button>
+        <button class="btn num-btn btn-5">5</button>
+        <button class="btn num-btn btn-6">6</button>
+        <button class="btn num-btn btn-7">7</button>
+        <button class="btn num-btn btn-8">8</button>
+        <button class="btn num-btn btn-9">9</button>
+        <button class="btn num-btn btn-0">0</button>
+        <button class="btn num-btn btn-dot">.</button>
+        <button class="btn op-btn btn-div">/</button>
+        <button class="btn op-btn btn-add">+</button>
+        <button class="btn op-btn btn--">-</button>
+        <button class="btn op-btn btn-x">*</button>
+        <button class="btn-del">DEL</button>
+        <button class="btn-reset">RESET</button>
+        <button class="btn-equal">=</button>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
