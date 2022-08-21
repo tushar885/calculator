@@ -96,47 +96,21 @@ th_3.addEventListener("click",() => {
 const num_btns = document.querySelectorAll(".num-btn");
 const op_btns = document.querySelectorAll(".op-btn");
 
-
-
-// result aaye ja rha hai jaise hi input aa raha HAI. 
-/*
-    aur starting mai sabse pahale first input hi result hoga
-    aur jab user equal wale button ko press karega tab equation hata ke only 
-    result show kar denge;
-
-    user should not be able to enter a operator without entering a number first
-    user should not be able to enter two operator ek saath 
-*/ 
-
-
-// let result = '';
-
 // this boolean will be used as a flag for, if the btn_equal is pressed, 
-// bcz after that we will seize all the operation, only u can reset after that 
+// bcz after that we will seize all the operation, only you can reset after that 
+
 let askForResult = false;
 
 const resultByParsingEq = (equation)=>{
     if (!equation) {
         calc_display_result.textContent = "";
     }else{
-
-    
-
-    let result = "";
+     let result = "";
     console.log(equation);
     lastChar = equation[equation.length-1];
-    // console.log(lastChar);
-    // let eqLength = equation.length;
-    // console.log(eqLength);
-
-    // removing, if the last char of the equation is a operator
-    // this thing will not work if user entered more than one operator at once
-
-    if(lastChar === '+' || lastChar === '-' || lastChar === '*' || lastChar === '/'){
+        if(lastChar === '+' || lastChar === '-' || lastChar === '*' || lastChar === '/'){
         equation = equation.slice(0,equation.length-1);
     }
-    // count of no of operation in equation;
-    // this thing will not work if user entered more than one operator at once
     let count = 0;
     for (const eqChar of equation) {
         if(eqChar === '+' || eqChar === '-' || eqChar === '*' || eqChar === '/'){
@@ -154,7 +128,6 @@ const resultByParsingEq = (equation)=>{
     equation = equation.replaceAll('*', '&*&');
     equation = equation.replaceAll('-', '&-&');
     equation = equation.replaceAll('/', '&/&');
-    // console.log(equation);
 
     let eqArray = equation.split('&');
     console.log(eqArray);
@@ -195,9 +168,6 @@ const resultByParsingEq = (equation)=>{
     calc_display_result.textContent = result;
 
 }
-    
-
-    
 };
 
 for (const btn of btns) {
